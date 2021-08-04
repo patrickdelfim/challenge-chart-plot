@@ -1,6 +1,9 @@
 const options = {
     responsive:true,
-    maintainAspectRatio: true,
+    animation: {
+      duration: 0
+  },
+    maintainAspectRatio: false,
     plugins:{
       legend: {
         position: 'right',

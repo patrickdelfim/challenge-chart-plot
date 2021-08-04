@@ -4,11 +4,22 @@
 <p>
 Still under development.
 completed partially
-  
-  
-  
-  
 </p>
+
+  Done (03/08):
+  * Added css to project
+  * Changed TextArea to CodeMirror text field
+  * Added Resizable button (not implemented functionality yet)
+  * Added Source san pro as default font
+  
+  TODO:
+  * Add Unit Tests
+  * Refactor ChartDataHandle and implement this edge cases:
+    - Stop analyze data after stop type input
+    - If new Start type input, Ignore past data
+    - If new Span type input, Reset chart boundaries
+  
+
 
 
 

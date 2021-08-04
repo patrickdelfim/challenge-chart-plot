@@ -1,15 +1,17 @@
 
 import './App.css';
-import Chart from './files/Chart/Chart';
+import Chart from './Component/Chart/Chart.js';
+import CodeTextBox from './Component/CodeTextBox.js'
+
+import { useState, useRef } from 'react';
 
 
-import { useState } from 'react';
 
 
 function App() {
 
   const [jsonCode, setJsonCode] = useState();
-  const [textAreaValue,setTextAreaValue] = useState()
+  const textAreaReference = useRef("")
 
   function jsonHandler(element){
 
@@ -21,26 +23,32 @@ function App() {
       console.error("ERROR: Please type a valid query")
     }
   }
-
+//container-fluid px-0
   return (
-    <div className="App">
+    
+    <div className="App d-flex  flex-column py-2">
 
-        <div>
+        <div className="p-1" >
           <h1 style={{textAlign:"left", fontSize:"25px"}}>Patrick Borges Challenge</h1>
-        </div>
+        </div> 
 
-      <textarea onChange={(e)=> setTextAreaValue(e.target.value)} style={{width:"95%",resize: "none",height: window.innerHeight/3}}>
-
-      </textarea>
+    <div >
+      <CodeTextBox reference = {textAreaReference} />
       
+      <button className="resizableBtn">===</button>
      
-      <Chart json={jsonCode}/>
       
+     </div>
+
+     <div className="flex-grow-1 text-center">
+      <Chart json={jsonCode} />
+      </div>
       
-    <div style={{padding:10}}>
-      <button style={{marginRight:"100%",width:100}} onClick={()=> jsonHandler(textAreaValue)}>Generate Chart</button>
+    <div className="justify-content-end pt-2 pl-2">
+      <button className="btn btn-primary" onClick={()=> jsonHandler(textAreaReference.current)}>Generate Chart</button>
     </div>
     </div>
+    
   );
 }
 

@@ -1,14 +1,14 @@
 import React from "react";
 import { Line } from 'react-chartjs-2';
-import options from './chartOptions.js'
-import dataHandler from './chartDataHandler.js'
+import options from './ChartOptions.js'
+import dataHandler from './ChartDataHandler.js'
 
 function Chart(props) {
   
 
 
 if(props.json === undefined){
-  return (<h1>"Load the data please..."</h1>)
+  return (<h1>Data loading...</h1>)
 }else{
 
   try{
