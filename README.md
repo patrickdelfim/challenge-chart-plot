@@ -5,6 +5,9 @@
 Still under development.
 completed partially
 </p>
+  Done (07/08)
+  * Added scrollable feature
+  * Refactored ChartDataHandle and implemented some edge cases
 
   Done (03/08):
   * Added css to project
@@ -14,10 +17,7 @@ completed partially
   
   TODO:
   * Add Unit Tests
-  * Refactor ChartDataHandle and implement this edge cases:
-    - Stop analyze data after stop type input
-    - If new Start type input, Ignore past data
-    - If new Span type input, Reset chart boundaries
+  
   
 
 

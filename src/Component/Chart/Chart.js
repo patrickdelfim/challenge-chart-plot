@@ -5,22 +5,22 @@ import dataHandler from './ChartDataHandler.js'
 
 function Chart(props) {
   
-
-
+//chartSection.current.getBoundingClientRect().height
+//style={{height:props.parentReference.current.getBoundingClientRect().height+"px"}}
 if(props.json === undefined){
-  return (<h1>Data loading...</h1>)
+  return (<h1>Load the data please.</h1>)
 }else{
 
   try{
   const data = dataHandler(props.json)
   return (
     
-
-    <Line data={data} options={options} />
+    
+    <Line data={data} options={options}  />
     
   )}
 catch(e){
-  console.error("Something went wrong!")
+  console.error("ERROR: Please type a valid query")
   return(<h1>Query Error</h1>)
 }
 }

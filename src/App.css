@@ -1,13 +1,25 @@
 
 .App {
-  font-family: 'Source Sans Pro', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   width: 100vw;
   height: 100vh;
+  overflow: hidden
+
+  
 }
+
+.ChartDiv{
+  overflow: hidden
+}
+
+
 
 .CodeMirror {
   font-family: 'Source Code Pro', monospace !important; 
+  /* height: 400px !important; */
+ 
+
   
   }
 
