@@ -5,7 +5,8 @@
 Still under development.
 completed partially
 </p>
-  Done (07/08)
+
+  Done (07/08):
   * Added scrollable feature
   * Refactored ChartDataHandle and implemented some edge cases
 
